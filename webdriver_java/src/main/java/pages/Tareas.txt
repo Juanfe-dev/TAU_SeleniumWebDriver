@@ -3,8 +3,9 @@
         * decir cuantos elementos de el menu que aparece ahi hay
  <--
 
- --> TAREA: Chapter 4.3 (SOLUCION EN ...)
+ --> TAREA: Chapter 4.3 (SOLUCION EN ForgotPassword.java)
         * Click en Forgot Password Link
         * Ingresar Email cualquiera
         * Verificar en la nueva pagina que el mensaje fue enviado
+            ¡NO PUDE TERMINAR LA TAREA YA QUE EL LINK EN LA WEB DE PRUEBA ESTA CAIDO!
  <--
