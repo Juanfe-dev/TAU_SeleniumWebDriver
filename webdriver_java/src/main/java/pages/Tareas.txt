@@ -1,0 +1,10 @@
+ --> TAREA: Chapter 2 (SOLUCION EN BaseTests)
+        * En la web que estamos trabajando, ir a "Shifting Content>Example 1: Menu Element" y
+        * decir cuantos elementos de el menu que aparece ahi hay
+ <--
+
+ --> TAREA: Chapter 4.3 (SOLUCION EN ...)
+        * Click en Forgot Password Link
+        * Ingresar Email cualquiera
+        * Verificar en la nueva pagina que el mensaje fue enviado
+ <--
