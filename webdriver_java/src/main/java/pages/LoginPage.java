@@ -20,7 +20,7 @@ public class LoginPage {
         driver.findElement(passwordLocator).sendKeys(password);
     }
     //Despues de dar en el boton Login nos enviara a otra pagina, esta debe ser retornada, y sera otra clase
-    public SecureAreaPage loginSubmit(WebDriver driver){
+    public SecureAreaPage loginSubmit(){
         driver.findElement(loginBtnLocator).click();
         return new SecureAreaPage(driver);
     }

@@ -5,6 +5,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import pages.HomePage;
 
 import java.util.List;
@@ -15,11 +17,14 @@ public class BaseTests {
     private WebDriver driver;
     protected HomePage homePage;
 
+    @BeforeClass
     public void setUp(){
         //Asignamos propiedades al driver
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
+        /** Tests Chapter 4.1: */
+        homePage = new HomePage(driver);
 
         /** Experimentemos con diferentes opciones para la ventana
         Maximizar
@@ -61,17 +66,16 @@ public class BaseTests {
          *         List<WebElement> menuLinks = driver.findElements(By.tagName("li"));
          *         System.out.println(menuLinks.size());
          * */
-
-        /** Tests Chapter 4.1: */
-        homePage = new HomePage(driver);
-
-        //driver.quit();
+    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
     }
 
+    /** Una vez puestas las anotaciones de TestNG no necesitamos un metodo MAIN
     //Creamos el main para correr el programa
-    public static void main(String[] args){
+    public static void main(String args[]){
         BaseTests test = new BaseTests();
         test.setUp();
-    }
-
+    }*/
 }
