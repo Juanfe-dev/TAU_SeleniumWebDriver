@@ -5,6 +5,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.HomePage;
 
 import java.util.List;
 
@@ -12,12 +13,13 @@ public class BaseTests {
 
     //Intancio el driver
     private WebDriver driver;
+    protected HomePage homePage;
 
     public void setUp(){
         //Asignamos propiedades al driver
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
-        // driver.get("https://the-internet.herokuapp.com/");
+        driver.get("https://the-internet.herokuapp.com/");
 
         /** Experimentemos con diferentes opciones para la ventana
         Maximizar
@@ -60,7 +62,9 @@ public class BaseTests {
          *         System.out.println(menuLinks.size());
          * */
 
-        System.out.println(driver.getTitle());
+        /** Tests Chapter 4.1: */
+        homePage = new HomePage(driver);
+
         //driver.quit();
     }
 
