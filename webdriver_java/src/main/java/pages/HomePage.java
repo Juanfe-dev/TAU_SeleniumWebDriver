@@ -27,6 +27,11 @@ public class HomePage {
         clickLink("Form Authentication");
         return new LoginPage(driver);
     }
+    public HoversPage clickHovers(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
+
     public DropdownPage clickDropdown(){
         clickLink("Dropdown");
         return new DropdownPage(driver);
