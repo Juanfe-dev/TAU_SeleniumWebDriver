@@ -31,10 +31,13 @@ public class HomePage {
         clickLink("Hovers");
         return new HoversPage(driver);
     }
-
     public DropdownPage clickDropdown(){
         clickLink("Dropdown");
         return new DropdownPage(driver);
+    }
+    public KeyPressesPage clickKeyPresses(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
     }
     private void clickLink(String linktext){
         driver.findElement(By.linkText(linktext)).click();
