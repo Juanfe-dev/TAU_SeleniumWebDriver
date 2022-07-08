@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 //Clase para todos los elementos del HomePage
 
@@ -42,6 +41,11 @@ public class HomePage {
     public HorizontalSliderPage clickHorizontalSlider(){
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
+    }
+
+    public AlertsPage clickJavaScriptAlerts(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
     }
     private void clickLink(String linktext){
         driver.findElement(By.linkText(linktext)).click();

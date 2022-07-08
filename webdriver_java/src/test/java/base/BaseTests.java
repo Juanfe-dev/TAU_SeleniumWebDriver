@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
 import java.util.List;
@@ -16,13 +17,16 @@ public class BaseTests {
     //Intancio el driver
     private WebDriver driver;
     protected HomePage homePage;
-
+    @BeforeMethod
+    public void goHome(){
+        driver.get("https://the-internet.herokuapp.com/");
+    }
     @BeforeClass
     public void setUp(){
         //Asignamos propiedades al driver
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");
+        goHome();
         /** Tests Chapter 4.1: */
         homePage = new HomePage(driver);
 
