@@ -10,5 +10,11 @@
             ¡NO PUDE TERMINAR LA TAREA YA QUE EL LINK EN LA WEB DE PRUEBA ESTA CAIDO!
  <--
 
+ --> TAREA: Chapter 6 (SOLUCION: SliderTests - HorizontalSliderPage)
+        * Click en Horizontal Slider
+        * Llevar el slider a la posicion 4
+        * Verificar que el slider esta en la posicion 4
+            SOLUCION:
+ <--
 
 
