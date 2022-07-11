@@ -1,4 +1,4 @@
-package contextMenu;
+package contextmenu;
 
 import base.BaseTests;
 import org.testng.annotations.Test;
