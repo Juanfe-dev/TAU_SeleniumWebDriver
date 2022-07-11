@@ -32,7 +32,7 @@ public class HoversPage {
         //Importamos las interacciones avanzadas de selenium
         Actions actions = new Actions(driver);
         actions.moveToElement(figure).perform(); //perform: llevar a cabo
-        /** Aqui ya estamos parados sobre el primer Hover entonces saldria ya se
+        /** Aqui ya estamos parados sobre el primer Hover entonces ya se
         podria ver el string name: user1 y el link
         estos estan dentro de una clase en el pom llamada figcaption
         crearemos un modelo para este tipo de elementos por buenas practicas
