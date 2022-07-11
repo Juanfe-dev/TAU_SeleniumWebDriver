@@ -65,8 +65,14 @@ public class HomePage {
         clickLink("Frames");
         return new FramesTareaPage(driver);
     }
+    public DynamicLoadingExample1and2Page clickDynamicLoadingExample1and2(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingExample1and2Page(driver);
+    }
 
     private void clickLink(String linktext){
         driver.findElement(By.linkText(linktext)).click();
     }
 }
+
+
