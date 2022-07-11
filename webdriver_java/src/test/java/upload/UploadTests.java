@@ -14,4 +14,5 @@ public class UploadTests extends BaseTests {
         uploadFileObject.uploadFile("C:\\Users\\jgomez\\Documents\\CampusSC\\IntellijWorkspace\\testautomationuniversity\\webdriver_java\\resources\\chromedriver.exe");
         assertEquals(uploadFileObject.getFileUpdate(),"chromedriver.exe");
     }
+
 }

@@ -52,10 +52,7 @@ public class HomePage {
         clickLink("File Upload");
         return new FileUploadPage(driver);
     }
-    public ContextMenuPage clickContextMenu(){
-        clickLink("Context Menu");
-        return new ContextMenuPage(driver);
-    }
+
     private void clickLink(String linktext){
         driver.findElement(By.linkText(linktext)).click();
     }
