@@ -60,6 +60,12 @@ public class HomePage {
         clickLink("WYSIWYG Editor");
         return new WYSIWYGEditorPage(driver);
     }
+
+    public FramesTareaPage clickFramesTarea(){
+        clickLink("Frames");
+        return new FramesTareaPage(driver);
+    }
+
     private void clickLink(String linktext){
         driver.findElement(By.linkText(linktext)).click();
     }

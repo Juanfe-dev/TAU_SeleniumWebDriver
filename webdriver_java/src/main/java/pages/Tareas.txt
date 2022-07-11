@@ -24,3 +24,9 @@
         * Dar ok en el Popup
  <--
 
+ -->  TAREA: Chapter 8 (SOLUCION: )
+        * Ir a link Frames
+        * Clic en Nested Frames
+        * Verificar el texto del frame Left y bottom desde un mismo test
+ <--
+
