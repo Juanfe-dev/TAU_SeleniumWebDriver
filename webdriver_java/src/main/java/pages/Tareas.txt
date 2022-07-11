@@ -14,7 +14,14 @@
         * Click en Horizontal Slider
         * Llevar el slider a la posicion 4
         * Verificar que el slider esta en la posicion 4
-            SOLUCION:
+ <--
+
+ -->  TAREA: Chapter 7 (SOLUCION: ContextMenuTest - ContextMenuPage)
+        * Ir al link Context Menu
+        * Clic en el cuadro subrayado
+        * Dar clic derecho
+        * Verificar el mensaje del popup
+        * Dar ok en el Popup
  <--
 
 
