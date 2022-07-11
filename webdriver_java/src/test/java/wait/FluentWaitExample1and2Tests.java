@@ -20,4 +20,15 @@ public class FluentWaitExample1and2Tests extends BaseTests {
                 "Final Message not found");
     }
 
+    @Test
+    public void testExample2(){
+        var dinamicExamples = homePage.clickDynamicLoadingExample1and2();
+        var example2 = dinamicExamples.clickExample2();
+
+        example2.clickStartBtn();
+        example2.waitFinalMessage();
+        assertEquals(example2.getFinalMessage(),
+                "Hello World!",
+                "Final Message not found");
+    }
 }
