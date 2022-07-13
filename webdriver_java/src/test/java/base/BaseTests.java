@@ -3,6 +3,7 @@ package base;
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -28,16 +29,19 @@ public class BaseTests {
     @BeforeMethod
     public void goHome(){
         driver.get("https://the-internet.herokuapp.com/");
+        homePage = new HomePage(driver);
     }
     @BeforeClass
     public void setUp(){
         //Asignamos propiedades al driver
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        driver = new EventFiringWebDriver(new ChromeDriver());
+        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
         driver.register(new EventReporter());
         goHome();
         /** Tests Chapter 4.1: */
-        homePage = new HomePage(driver);
+        /*homePage = new HomePage(driver);*/
+        setCookie();
+
 
         /** Experimentemos con diferentes opciones para la ventana
         Maximizar
@@ -122,5 +126,22 @@ public class BaseTests {
     //Metodo para la clase 11 de Window.Navigation
     public WindowManager getWindowManager(){
         return new WindowManager(driver);
+    }
+    private ChromeOptions getChromeOptions(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+        //options.setHeadless(true);
+        return options ;
+    }
+    //Cookie
+    public  void setCookie(){
+        //domain sera el website de donde ser guardara el cookie
+        //Creamos el cookie
+        Cookie cookie = new Cookie.Builder("tau", "123")
+                .domain("the-internet.herokuapp.com")
+                .build();
+        //Hay varios metodos para manipular esta cookie
+        //Agregamos el cookie
+        driver.manage().addCookie(cookie);
     }
 }

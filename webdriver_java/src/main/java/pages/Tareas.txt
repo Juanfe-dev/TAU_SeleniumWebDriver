@@ -58,3 +58,9 @@
 -->  TAREA: Chapter 13 (SOLUCION: )
         * Implementar cualquier método de la interfaz WebDriverEventListener en EventReporter class
 <--
+
+-->  TAREA: Chapter 14 (SOLUCION: )
+        * Crear un test que vaya a nuestra pagina principal
+        * Y borrar alguna de las cookies almacenadas
+        * Verificar que ya la cookie no existe.
+<--
