@@ -30,3 +30,19 @@
         * Verificar el texto del frame Left y bottom desde un mismo test
  <--
 
+ -->  TAREA: Chapter 9 (SOLUCION: DynamicLoadingExample2Page - FluentWaitExample1and2Tests)
+        * Entrar al link Dynamic Loading
+        * Clic en el ejemplo 2
+        * Clic en start button
+        * Esperar con un FluentWait
+        * Verificar el mensaje final
+ <--
+
+ -->  TAREA: Chapter 10 (SOLUCION: )
+        * Clic en el link Dropdown
+        * Usar JavaScript para cambiar el elemento
+        * Inspeccionar>Copy>Copy JS Path
+        * Pegar en Console del inspeccionar para observarlo
+        * Desde ahí se puede experimentar con los métodos que permite ese locator,
+            Ej: .setAttribute('multiple', '...')
+ <--
