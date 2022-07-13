@@ -54,3 +54,7 @@
         * Abrir el link en nueva pestaña
         * Hacer switch a ella
         * Verificar que esta presente el boton "Start"
+
+-->  TAREA: Chapter 13 (SOLUCION: )
+        * Implementar cualquier método de la interfaz WebDriverEventListener en EventReporter class
+<--
