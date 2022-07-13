@@ -1,16 +1,20 @@
 package base;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import utils.WindowManager;
 
+import javax.imageio.IIOException;
+import javax.xml.transform.Result;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class BaseTests {
@@ -72,6 +76,33 @@ public class BaseTests {
          *         System.out.println(menuLinks.size());
          * */
     }
+    @AfterMethod
+    public void takeScreenshot(ITestResult result){
+        //Hay que hacer el casteo para trabajar con selenium
+        var camera = (TakesScreenshot)driver;
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        //Para la siguiente Files importaremos el commons de google en vez del javaio
+        //Asignamos de directorio el screenshots
+        //Ya que el .move tira excepcion hacemos un wrap en un trycatch
+        try {
+            Files.move(screenshot, new File("resources/screenshots/passes/"+result.getName()+"Passed.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @AfterMethod
+    public void recordFailure(ITestResult result) {
+        if (ITestResult.FAILURE == result.getStatus()) {
+            var camera = (TakesScreenshot) driver;
+            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            try {
+                Files.move(screenshot, new File("resources/screenshots/failures/"+result.getName()+"Failed.png"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
     @AfterClass
     public void tearDown(){
         driver.quit();

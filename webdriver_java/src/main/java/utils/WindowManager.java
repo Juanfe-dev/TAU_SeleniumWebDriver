@@ -38,6 +38,7 @@ public class WindowManager {
         System.out.println("Window handles: ");
         windows.forEach(System.out::println);
 
+
         //Primera iteracion: switch a la primera ventana
         //... a la segunda ventana
         //etc...
