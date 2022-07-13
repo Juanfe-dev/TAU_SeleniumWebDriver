@@ -46,3 +46,11 @@
         * Desde ahí se puede experimentar con los métodos que permite ese locator,
             Ej: .setAttribute('multiple', '...')
  <--
+
+ -->  TAREA: Chapter 11 (SOLUCION: )
+        * Clic en Dynamic Loading
+        * Elegir un link de los dos que hay
+        * Simular un clic derecho
+        * Abrir el link en nueva pestaña
+        * Hacer switch a ella
+        * Verificar que esta presente el boton "Start"

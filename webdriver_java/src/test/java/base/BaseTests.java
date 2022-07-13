@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.WindowManager;
 
 import java.util.List;
 
@@ -82,4 +83,9 @@ public class BaseTests {
         BaseTests test = new BaseTests();
         test.setUp();
     }*/
+
+    //Metodo para la clase 11 de Window.Navigation
+    public WindowManager getWindowManager(){
+        return new WindowManager(driver);
+    }
 }
